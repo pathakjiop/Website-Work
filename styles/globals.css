@@ -123,3 +123,13 @@
     @apply bg-background text-foreground;
   }
 }
+/* Optional: Custom scroll behavior for more control */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Optional: For even slower, more controlled scrolling */
+.slow-scroll {
+  scroll-behavior: smooth;
+  scroll-timeline: 2s ease-in-out;
+}
