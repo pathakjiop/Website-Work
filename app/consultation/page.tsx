@@ -1,49 +1,17 @@
-"use client"
-
 import type React from "react"
-
-import { useState } from "react"
 import Link from "next/link"
 import Header from "@/components/header"
 import Footer from "@/components/footer"
-import { submitConsultation } from "./actions"
 
 export default function ConsultationPage() {
-  const [isSubmitting, setIsSubmitting] = useState(false)
-  const [message, setMessage] = useState<{ type: "success" | "error"; text: string } | null>(null)
 
-  async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
-    e.preventDefault()
-    setIsSubmitting(true)
-    setMessage(null)
-
-    const formData = new FormData(e.currentTarget)
-
-    try {
-      const result = await submitConsultation(formData)
-
-      if (result.success) {
-        setMessage({
-          type: "success",
-          text: "Thank you! Your consultation request has been submitted successfully. We'll contact you within 24 hours.",
-        })
-        e.currentTarget.reset()
-      } else {
-        setMessage({ type: "error", text: result.error || "Something went wrong. Please try again." })
-      }
-    } catch (error) {
-      setMessage({ type: "error", text: "Failed to submit. Please try again later." })
-    } finally {
-      setIsSubmitting(false)
-    }
-  }
 
   return (
     <>
       <Header />
       <main className="min-h-screen bg-background">
         {/* Hero Section */}
-        <div className="relative overflow-hidden bg-gradient-to-br from-primary/10 via-background to-background border-b border-border">
+        <div className="relative overflow-hidden bg-linear-to-br from-primary/10 via-background to-background border-b border-border">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20">
             <div className="text-center space-y-4">
               <p className="text-sm font-semibold text-primary uppercase tracking-widest">Get Started Today</p>
@@ -60,7 +28,7 @@ export default function ConsultationPage() {
 
         {/* Form Section */}
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-          <form onSubmit={handleSubmit} className="space-y-8">
+          <form className="space-y-8">
             {/* Personal Information */}
             <div className="space-y-6">
               <h2 className="text-2xl font-bold text-foreground">Personal Information</h2>
@@ -261,25 +229,14 @@ export default function ConsultationPage() {
             </div>
 
             {/* Message Display */}
-            {message && (
-              <div
-                className={`p-4 rounded-lg border ${
-                  message.type === "success"
-                    ? "bg-green-50 border-green-200 text-green-800"
-                    : "bg-red-50 border-red-200 text-red-800"
-                }`}
-              >
-                <p className="text-sm font-medium">{message.text}</p>
-              </div>
-            )}
+           
 
             {/* Submit Button */}
             <button
               type="submit"
-              disabled={isSubmitting}
               className="w-full px-8 py-3.5 bg-primary text-primary-foreground rounded-lg font-semibold hover:opacity-90 transition-opacity shadow-md hover:shadow-lg disabled:opacity-50 disabled:cursor-not-allowed"
             >
-              {isSubmitting ? "Submitting..." : "Submit Consultation Request"}
+              Submit
             </button>
 
             <p className="text-sm text-muted-foreground text-center leading-relaxed">
