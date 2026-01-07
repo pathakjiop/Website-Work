@@ -1,7 +1,8 @@
 "use client"
 
 import { useState, useEffect } from "react"
-import Header from "@/components/header"
+import Link from "next/link"
+
 
 const sections = [
   { id: "agreement", title: "1. Agreement to Terms", number: "1" },
@@ -17,11 +18,12 @@ const sections = [
 ]
 
 export default function TermsConditions() {
-  const [activeSection, setActiveSection] = useState("agreement")
+  const [activeSection, setActiveSection] = useState("introduction")
+  const [isOpen, setIsOpen] = useState(false)
 
   useEffect(() => {
     const handleScroll = () => {
-      const scrollPosition = window.scrollY + 100
+      const scrollPosition = window.scrollY + 120
       for (const section of sections) {
         const element = document.getElementById(section.id)
         if (element && element.offsetTop <= scrollPosition) {
@@ -35,15 +37,61 @@ export default function TermsConditions() {
   }, [])
 
   const scrollToSection = (id: string) => {
-    const element = document.getElementById(id)
-    element?.scrollIntoView({ behavior: "smooth" })
+    document.getElementById(id)?.scrollIntoView({ behavior: "smooth" })
     setActiveSection(id)
   }
 
+
   return (
     <>
+     {/* ================= NAVBAR ================= */}
+      <header className="sticky top-0 z-50 bg-background border-b border-border shadow-sm">
+        <div className="max-w-7xl mx-auto px-4 h-16 flex items-center justify-between">
+          {/* Logo */}
+          <Link href="/" className="flex items-center gap-2">
+            <div className="w-10 h-10 bg-primary rounded-lg flex items-center justify-center">
+              <span className="text-primary-foreground font-bold text-lg">E</span>
+            </div>
+            <div className="hidden sm:block">
+              <p className="font-bold text-primary leading-none">EgaleSwift</p>
+              <p className="text-xs text-muted-foreground">Global Advisors</p>
+            </div>
+          </Link>
 
-  <Header />
+          {/* Desktop Nav */}
+          <nav className="hidden md:flex gap-8">
+            <Link href="/#services" className="text-sm hover:text-primary">Services</Link>
+            <Link href="/#about" className="text-sm hover:text-primary">About</Link>
+            <Link href="/#contact" className="text-sm hover:text-primary">Contact</Link>
+            <Link href="/privacy" className="text-sm hover:text-primary">Privacy</Link>
+            <Link href="/terms" className="text-sm hover:text-primary">Terms</Link>
+          </nav>
+
+          <Link
+            href="/consultation"
+            className="hidden md:block px-6 py-2 bg-primary text-primary-foreground rounded-lg text-sm font-semibold"
+          >
+            Schedule Call
+          </Link>
+
+          {/* Mobile Button */}
+          <button onClick={() => setIsOpen(!isOpen)} className="md:hidden">
+            ☰
+          </button>
+        </div>
+
+        {/* Mobile Nav */}
+        {isOpen && (
+          <nav className="md:hidden px-4 pb-4 space-y-2 border-t">
+            <Link href="/#services" onClick={() => setIsOpen(false)}>Services</Link>
+            <Link href="/#about" onClick={() => setIsOpen(false)}>About</Link>
+            <Link href="/#contact" onClick={() => setIsOpen(false)}>Contact</Link>
+            <Link href="/privacy" onClick={() => setIsOpen(false)}>Privacy</Link>
+            <Link href="/terms" onClick={() => setIsOpen(false)}>Terms</Link>
+          </nav>
+        )}
+      </header>
+
     <main className="min-h-screen bg-background">
       <div className="flex">
         {/* Sticky Sidebar Navigation */}
