@@ -1,3 +1,5 @@
+import Link from "next/link"
+
 export default function Hero() {
   return (
     <section className="relative bg-gradient-to-br from-primary via-primary/95 to-accent text-primary-foreground py-24 md:py-32 lg:py-40 overflow-hidden">
@@ -21,12 +23,18 @@ export default function Hero() {
             borders.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="px-8 py-3 bg-primary-foreground text-primary rounded-lg font-semibold hover:shadow-lg transition-shadow">
+            <Link
+              href="/consultation"
+              className="px-8 py-3 bg-primary-foreground text-primary rounded-lg font-semibold hover:shadow-lg transition-shadow"
+            >
               Schedule Consultation
-            </button>
-            <button className="px-8 py-3 border-2 border-primary-foreground text-primary-foreground rounded-lg font-semibold hover:bg-primary-foreground/10 transition-all">
+            </Link>
+            <Link
+              href="#services"
+              className="px-8 py-3 border-2 border-primary-foreground text-primary-foreground rounded-lg font-semibold hover:bg-primary-foreground/10 transition-all"
+            >
               Learn More
-            </button>
+            </Link>
           </div>
         </div>
       </div>

@@ -11,7 +11,7 @@ export default function Services() {
     },
     {
       icon: FileCheck,
-      title: "Auditing Services",
+      title: "Auditing Support Services",
       description:
         "Comprehensive statutory and internal audits providing independent assurance. Our experienced auditors deliver actionable insights to improve operational efficiency and strengthen financial controls.",
       features: ["Statutory Audits", "Internal Audits", "Risk Assessment", "Process Improvement"],
