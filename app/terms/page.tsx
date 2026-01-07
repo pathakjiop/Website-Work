@@ -1,6 +1,7 @@
 "use client"
 
 import { useState, useEffect } from "react"
+import Header from "@/components/header"
 
 const sections = [
   { id: "agreement", title: "1. Agreement to Terms", number: "1" },
@@ -40,6 +41,9 @@ export default function TermsConditions() {
   }
 
   return (
+    <>
+
+  <Header />
     <main className="min-h-screen bg-background">
       <div className="flex">
         {/* Sticky Sidebar Navigation */}
@@ -53,9 +57,9 @@ export default function TermsConditions() {
                   onClick={() => scrollToSection(section.id)}
                   className={`block w-full text-left px-4 py-2 rounded-lg text-sm transition-all duration-200 ${
                     activeSection === section.id
-                      ? "bg-primary text-primary-foreground font-medium"
+                    ? "bg-primary text-primary-foreground font-medium"
                       : "text-muted-foreground hover:text-foreground hover:bg-muted"
-                  }`}
+                    }`}
                 >
                   {section.number}
                 </button>
@@ -307,5 +311,6 @@ export default function TermsConditions() {
         </div>
       </div>
     </main>
+  </>
   )
 }

@@ -1,113 +1,56 @@
 @import "tailwindcss";
 @import "tw-animate-css";
 
-@custom-variant dark (&:is(.dark *));
-
 :root {
-  /* Professional light design system with navy blue, slate gray, and subtle teal accent */
+ /* Refined dark mode with deep navy and cool grays */
+  --background: oklch(0.145 0 0); /* Deep navy background */
+  --foreground: oklch(0.985 0 0); /* Soft white text */
 
-  /* Base colors - crisp white backgrounds with deep slate text */
-  --background: oklch(1 0 0); /* Pure white for maximum professionalism */
-  --foreground: oklch(0.25 0.01 240); /* Deep navy-slate for text */
+  --card: oklch(0.205 0 0);
+  --card-foreground: oklch(0.985 0 0);
 
-  /* Card surfaces - slightly off-white for subtle depth */
-  --card: oklch(0.99 0 0);
-  --card-foreground: oklch(0.25 0.01 240);
+  --popover: oklch(0.269 0 0);
+  --popover-foreground: oklch(0.985 0 0);
 
-  /* Popovers and overlays */
-  --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.25 0.01 240);
+  --primary: oklch(0.922 0 0); /* Bright professional blue */
+  --primary-foreground: oklch(0.205 0 0);
 
-  /* Primary - sophisticated navy blue */
-  --primary: oklch(0.32 0.08 250); /* Professional navy */
-  --primary-foreground: oklch(1 0 0); /* White text on primary */
+  --secondary: oklch(0.269 0 0); /* Dark slate */
+  --secondary-foreground: oklch(0.985 0 0);
 
-  /* Secondary - refined slate gray */
-  --secondary: oklch(0.88 0.005 240); /* Light slate for secondary actions */
-  --secondary-foreground: oklch(0.25 0.01 240); /* Dark text on light secondary */
+  --muted: oklch(0.269 0 0);
+  --muted-foreground: oklch(0.708 0 0);
 
-  /* Muted elements - subtle backgrounds */
-  --muted: oklch(0.96 0.002 240); /* Very light slate background */
-  --muted-foreground: oklch(0.5 0.01 240); /* Medium slate for muted text */
+  --accent: oklch(0.371 0 0);
+  --accent-foreground: oklch(0.985 0 0);
 
-  /* Accent - professional teal for highlights */
-  --accent: oklch(0.88 0.005 240); /* Subtle slate accent */
-  --accent-foreground: oklch(0.25 0.01 240);
+  --destructive: oklch(0.704 0.191 22.216);
+  --destructive-foreground: oklch(0.985 0 0);
 
-  /* Destructive - professional red */
-  --destructive: oklch(0.55 0.22 25);
-  --destructive-foreground: oklch(1 0 0);
+  --border: oklch(1 0 0 / 10%);
+  --input: oklch(1 0 0 / 15%);
+  --ring: oklch(0.556 0 0);
 
-  /* Borders and inputs - light gray tones */
-  --border: oklch(0.91 0.002 240); /* Soft slate border */
-  --input: oklch(0.96 0.002 240); /* Light input background */
-  --ring: oklch(0.32 0.08 250); /* Navy focus ring */
+  --chart-1: oklch(0.488 0.243 264.376);
+  --chart-2: oklch(0.696 0.17 162.48);
+  --chart-3: oklch(0.769 0.188 70.08);
+  --chart-4: oklch(0.627 0.265 303.9);
+  --chart-5: oklch(0.645 0.246 16.439);
 
-  /* Chart colors - professional palette */
-  --chart-1: oklch(0.32 0.08 250); /* Navy */
-  --chart-2: oklch(0.5 0.1 200); /* Professional teal */
-  --chart-3: oklch(0.6 0.08 240); /* Medium blue */
-  --chart-4: oklch(0.45 0.09 260); /* Deep blue */
-  --chart-5: oklch(0.7 0.08 220); /* Light blue */
-
-  /* Subtle rounded corners for modern professional look */
-  --radius: 0.5rem;
-
-  /* Sidebar colors */
-  --sidebar: oklch(0.99 0 0);
-  --sidebar-foreground: oklch(0.25 0.01 240);
-  --sidebar-primary: oklch(0.32 0.08 250);
-  --sidebar-primary-foreground: oklch(1 0 0);
-  --sidebar-accent: oklch(0.88 0.005 240);
-  --sidebar-accent-foreground: oklch(0.25 0.01 240);
-  --sidebar-border: oklch(0.91 0.002 240);
-  --sidebar-ring: oklch(0.32 0.08 250);
-}
-
-.dark {
-  /* Refined dark mode with deep navy and cool grays */
-  --background: oklch(0.14 0.01 240); /* Deep navy background */
-  --foreground: oklch(0.95 0.005 240); /* Soft white text */
-
-  --card: oklch(0.18 0.01 240);
-  --card-foreground: oklch(0.95 0.005 240);
-
-  --popover: oklch(0.18 0.01 240);
-  --popover-foreground: oklch(0.95 0.005 240);
-
-  --primary: oklch(0.6 0.1 230); /* Bright professional blue */
-  --primary-foreground: oklch(0.14 0.01 240);
-
-  --secondary: oklch(0.25 0.01 240); /* Dark slate */
-  --secondary-foreground: oklch(0.95 0.005 240);
-
-  --muted: oklch(0.22 0.01 240);
-  --muted-foreground: oklch(0.65 0.01 240);
-
-  --accent: oklch(0.25 0.01 240);
-  --accent-foreground: oklch(0.95 0.005 240);
-
-  --destructive: oklch(0.5 0.22 25);
-  --destructive-foreground: oklch(0.95 0.005 240);
-
-  --border: oklch(0.28 0.01 240);
-  --input: oklch(0.22 0.01 240);
-  --ring: oklch(0.6 0.1 230);
-
-  --chart-1: oklch(0.6 0.1 230);
-  --chart-2: oklch(0.55 0.12 200);
-  --chart-3: oklch(0.65 0.09 240);
-  --chart-4: oklch(0.5 0.11 260);
-  --chart-5: oklch(0.7 0.08 220);
-
-  --sidebar: oklch(0.18 0.01 240);
-  --sidebar-foreground: oklch(0.95 0.005 240);
-  --sidebar-primary: oklch(0.6 0.1 230);
-  --sidebar-primary-foreground: oklch(0.14 0.01 240);
-  --sidebar-accent: oklch(0.25 0.01 240);
-  --sidebar-accent-foreground: oklch(0.95 0.005 240);
-  --sidebar-border: oklch(0.28 0.01 240);
-  --sidebar-ring: oklch(0.6 0.1 230);
+  --sidebar: oklch(0.205 0 0);
+  --sidebar-foreground: oklch(0.985 0 0);
+  --sidebar-primary: oklch(0.488 0.243 264.376);
+  --sidebar-primary-foreground: oklch(0.985 0 0);
+  --sidebar-accent: oklch(0.269 0 0);
+  --sidebar-accent-foreground: oklch(0.985 0 0);
+  --sidebar-border: oklch(1 0 0 / 10%);
+  --sidebar-ring: oklch(0.439 0 0);
+  --shadow-x: 0px;
+  --shadow-y: 1px;
+  --shadow-blur: 2px;
+  --shadow-spread: 0px;
+  --shadow-opacity: 0.05;
+  --shadow-color: #000000;
 }
 
 @theme inline {
@@ -147,6 +90,24 @@
   --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-ring: var(--sidebar-ring);
+  --font-sans: 'Geist', 'Geist Fallback';
+  --font-mono: 'Geist Mono', 'Geist Mono Fallback';
+  --font-serif: 'Source Serif 4', 'Source Serif 4 Fallback';
+  /* computed shadow variables below - do not modify */
+  --shadow-2xs: var(--shadow-x) var(--shadow-y) color-mix(in srgb, var(--shadow-color) calc(var(--shadow-opacity) * 100%), transparent);
+  --shadow-xs: var(--shadow-x) var(--shadow-y) var(--shadow-blur) var(--shadow-spread) color-mix(in srgb, var(--shadow-color) calc(var(--shadow-opacity) * 100%), transparent);
+  --shadow-sm: var(--shadow-x) var(--shadow-y) calc(var(--shadow-blur) * 1.5) var(--shadow-spread) color-mix(in srgb, var(--shadow-color) calc(var(--shadow-opacity) * 100%), transparent);
+  --shadow-md: calc(var(--shadow-x) * 2) calc(var(--shadow-y) * 2) calc(var(--shadow-blur) * 3) calc(var(--shadow-spread) - 1px) color-mix(in srgb, var(--shadow-color) calc(var(--shadow-opacity) * 100%), transparent);
+  --shadow-lg: calc(var(--shadow-x) * 4) calc(var(--shadow-y) * 4) calc(var(--shadow-blur) * 5) calc(var(--shadow-spread) - 3px) color-mix(in srgb, var(--shadow-color) calc(var(--shadow-opacity) * 100%), transparent);
+  --shadow-xl: calc(var(--shadow-x) * 6) calc(var(--shadow-y) * 6) calc(var(--shadow-blur) * 7) calc(var(--shadow-spread) - 5px) color-mix(in srgb, var(--shadow-color) calc(var(--shadow-opacity) * 100%), transparent);
+  --shadow-2xl: calc(var(--shadow-x) * 8) calc(var(--shadow-y) * 8) calc(max(0px, var(--shadow-blur) * 9 - 8px)) calc(var(--shadow-spread) - 12px) color-mix(in srgb, var(--shadow-color) calc(var(--shadow-opacity) * 250%), transparent);
+  --shadow: var(--shadow-md);
+  --color-shadow-color: var(--shadow-color);
+  --shadow-opacity: var(--shadow-opacity);
+  --shadow-spread: var(--shadow-spread);
+  --shadow-blur: var(--shadow-blur);
+  --shadow-y: var(--shadow-y);
+  --shadow-x: var(--shadow-x);
 }
 
 @layer base {

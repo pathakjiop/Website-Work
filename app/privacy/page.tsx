@@ -1,6 +1,8 @@
 "use client"
 
 import { useState, useEffect } from "react"
+import Header from "@/components/header"
+import Footer from "@/components/footer"
 
 const sections = [
   { id: "introduction", title: "1. Introduction", number: "1" },
@@ -39,6 +41,8 @@ export default function PrivacyPolicy() {
   }
 
   return (
+    <>
+    <Header />
     <main className="min-h-screen bg-background">
       <div className="flex">
         {/* Sticky Sidebar Navigation */}
@@ -291,5 +295,6 @@ export default function PrivacyPolicy() {
         </div>
       </div>
     </main>
+    </>
   )
 }
