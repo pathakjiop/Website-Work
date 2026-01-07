@@ -96,7 +96,7 @@ export default function TermsConditions() {
                 <div className="flex-1">
                   <h2 className="text-2xl font-bold text-foreground mb-4">Agreement to Terms</h2>
                   <p className="text-base text-muted-foreground leading-relaxed">
-                    By accessing and using this website and the services provided by EagleSwift Global Advisors, you
+                    By accessing and using this website and the services provided by EgaleSwift Global Advisors, you
                     agree to be bound by these Terms & Conditions. If you do not agree to abide by the above, please do
                     not use this service.
                   </p>
@@ -115,7 +115,7 @@ export default function TermsConditions() {
                 <div className="flex-1">
                   <h2 className="text-2xl font-bold text-foreground mb-4">Services Description</h2>
                   <p className="text-base text-muted-foreground leading-relaxed mb-6">
-                    EagleSwift Global Advisors provides professional advisory services including:
+                    EgaleSwift Global Advisors provides professional advisory services including:
                   </p>
                   <ul className="space-y-3 mb-6">
                     {[
@@ -150,7 +150,7 @@ export default function TermsConditions() {
                   <h2 className="text-2xl font-bold text-foreground mb-4">Intellectual Property Rights</h2>
                   <p className="text-base text-muted-foreground leading-relaxed">
                     All content on this website, including text, graphics, logos, images, and software, is the property
-                    of EagleSwift Global Advisors or its content suppliers and is protected by international copyright
+                    of EgaleSwift Global Advisors or its content suppliers and is protected by international copyright
                     laws.
                   </p>
                 </div>
@@ -187,7 +187,7 @@ export default function TermsConditions() {
                 <div className="flex-1">
                   <h2 className="text-2xl font-bold text-foreground mb-4">Limitation of Liability</h2>
                   <p className="text-base text-muted-foreground leading-relaxed">
-                    In no event shall EagleSwift Global Advisors be liable for any indirect, incidental, special, or
+                    In no event shall EgaleSwift Global Advisors be liable for any indirect, incidental, special, or
                     consequential damages arising out of or related to this website or the services provided, even if we
                     have been advised of the possibility of such damages.
                   </p>
@@ -244,7 +244,7 @@ export default function TermsConditions() {
                 <div className="flex-1">
                   <h2 className="text-2xl font-bold text-foreground mb-4">Modification of Terms</h2>
                   <p className="text-base text-muted-foreground leading-relaxed">
-                    EagleSwift Global Advisors reserves the right to modify these terms and conditions at any time.
+                    EgaleSwift Global Advisors reserves the right to modify these terms and conditions at any time.
                     Changes will be effective upon posting to the website.
                   </p>
                 </div>
@@ -283,11 +283,11 @@ export default function TermsConditions() {
                     If you have any questions about these Terms & Conditions, please contact us:
                   </p>
                   <div className="bg-card border border-border rounded-xl p-6 space-y-3">
-                    <p className="font-semibold text-foreground text-lg">EagleSwift Global Advisors</p>
+                    <p className="font-semibold text-foreground text-lg">EgaleSwift Global Advisors</p>
                     <div className="space-y-2">
                       <p className="text-base text-muted-foreground">
                         <span className="font-medium text-foreground">Email: </span>
-                        legal@eagleswift.com
+                        legal@EgaleSwift.com
                       </p>
                       <p className="text-base text-muted-foreground">
                         <span className="font-medium text-foreground">Phone: </span>

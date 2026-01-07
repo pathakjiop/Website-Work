@@ -16,7 +16,7 @@ export default function Header() {
               <span className="text-primary-foreground font-bold text-lg">E</span>
             </div>
             <div className="hidden sm:block">
-              <span className="font-bold text-lg text-primary">EagleSwift</span>
+              <span className="font-bold text-lg text-primary">EgaleSwift</span>
               <p className="text-xs text-muted-foreground leading-none">Global Advisors</p>
             </div>
           </Link>

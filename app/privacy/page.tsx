@@ -77,7 +77,7 @@ export default function PrivacyPolicy() {
                   Privacy <span className="block text-primary">Policy</span>
                 </h1>
                 <p className="text-lg text-muted-foreground max-w-2xl leading-relaxed pt-4">
-                  EagleSwift Global Advisors is committed to protecting your privacy. This policy explains how we
+                  EgaleSwift Global Advisors is committed to protecting your privacy. This policy explains how we
                   collect, use, and safeguard your data.
                 </p>
               </div>
@@ -96,7 +96,7 @@ export default function PrivacyPolicy() {
                 <div className="flex-1">
                   <h2 className="text-2xl font-bold text-foreground mb-4">Introduction</h2>
                   <p className="text-base text-muted-foreground leading-relaxed">
-                    EagleSwift Global Advisors ("we," "us," "our," or "Company") is committed to protecting your privacy.
+                    EgaleSwift Global Advisors ("we," "us," "our," or "Company") is committed to protecting your privacy.
                     This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you
                     visit our website and use our services.
                   </p>
@@ -267,11 +267,11 @@ export default function PrivacyPolicy() {
                     For privacy-related inquiries, reach out to our data protection officer:
                   </p>
                   <div className="bg-card border border-border rounded-xl p-6 space-y-3">
-                    <p className="font-semibold text-foreground text-lg">EagleSwift Global Advisors</p>
+                    <p className="font-semibold text-foreground text-lg">EgaleSwift Global Advisors</p>
                     <div className="space-y-2">
                       <p className="text-base text-muted-foreground">
                         <span className="font-medium text-foreground">Email: </span>
-                        privacy@eagleswift.com
+                        privacy@EgaleSwift.com
                       </p>
                       <p className="text-base text-muted-foreground">
                         <span className="font-medium text-foreground">Phone: </span>

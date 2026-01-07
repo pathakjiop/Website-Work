@@ -45,7 +45,7 @@ export default function About() {
         {/* Section Header */}
         <div className="text-center mb-16">
           <p className="text-primary text-sm font-semibold uppercase tracking-wide mb-2">Know Our Team</p>
-          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">About EagleSwift</h2>
+          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">About EgaleSwift</h2>
         </div>
 
         {/* Highlights */}

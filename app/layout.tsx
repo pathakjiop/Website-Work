@@ -7,7 +7,7 @@ import "./globals.css"
 const _geist = Geist({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  title: "EagleSwift Global Advisors | Accounting & Advisory Services",
+  title: "EgaleSwift Global Advisors | Accounting & Advisory Services",
   description: "Professional accounting, auditing, compliance and advisory services for Indian and offshore clients.",
   generator: "v0.app",
   icons: {

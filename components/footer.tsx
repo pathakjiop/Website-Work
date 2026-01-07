@@ -14,7 +14,7 @@ export default function Footer() {
                   <span className="text-primary font-bold text-lg">E</span>
                 </div>
                 <div>
-                  <h4 className="font-bold">EagleSwift</h4>
+                  <h4 className="font-bold">EgaleSwift</h4>
                   <p className="text-xs opacity-75">Global Advisors</p>
                 </div>
               </div>
@@ -109,7 +109,7 @@ export default function Footer() {
           {/* Footer Bottom */}
           <div className="border-t border-primary-foreground/20 pt-8">
             <div className="flex flex-col md:flex-row justify-between items-center">
-              <p className="text-sm opacity-75">&copy; 2026 EagleSwift Global Advisors. All rights reserved.</p>
+              <p className="text-sm opacity-75">&copy; 2026 EgaleSwift Global Advisors. All rights reserved.</p>
               <p className="text-sm opacity-75 mt-4 md:mt-0">Trusted by businesses across India and globally</p>
             </div>
           </div>

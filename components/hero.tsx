@@ -18,7 +18,7 @@ export default function Hero() {
             "Trust. Expertise. Growth."
           </p>
           <p className="text-lg md:text-xl text-primary-foreground/90 mb-8 text-pretty leading-relaxed max-w-3xl mx-auto">
-            EagleSwift Global Advisors is your trusted partner for comprehensive accounting, auditing, compliance, and
+            EgaleSwift Global Advisors is your trusted partner for comprehensive accounting, auditing, compliance, and
             strategic advisory services. Serving Indian and offshore clients with expertise and integrity across
             borders.
           </p>
