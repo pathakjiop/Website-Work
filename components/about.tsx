@@ -48,13 +48,13 @@ export default function About() {
           <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">About EgaleSwift</h2>
         </div>
 
-        {/* Highlights */}
+        {/* Highlights - Extra Rounded Corners [2rem] */}
         <div className="grid md:grid-cols-4 gap-6 mb-16">
           {highlights.map((item, index) => {
             const Icon = item.icon
             return (
-              <div key={index} className="text-center p-6 bg-card rounded-lg border border-border">
-                <div className="inline-flex items-center justify-center w-12 h-12 bg-primary/10 rounded-lg mb-4">
+              <div key={index} className="text-center p-6 bg-card rounded-[2rem] border border-border shadow-sm hover:shadow-md transition-shadow">
+                <div className="inline-flex items-center justify-center w-12 h-12 bg-primary/10 rounded-2xl mb-4">
                   <Icon className="w-6 h-6 text-primary" />
                 </div>
                 <h4 className="font-bold text-foreground mb-2">{item.title}</h4>
@@ -64,9 +64,9 @@ export default function About() {
           })}
         </div>
 
-        {/* Vision & Motto Section */}
+        {/* Vision & Motto Section - Rounded-2xl */}
         <div className="grid md:grid-cols-2 gap-8 mb-16">
-          <div className="p-8 bg-gradient-to-br from-primary/5 to-accent/5 border border-primary/10 rounded-xl">
+          <div className="p-8 bg-gradient-to-br from-primary/5 to-accent/5 border border-primary/10 rounded-2xl">
             <h3 className="text-3xl font-bold text-foreground mb-4">Our Vision</h3>
             <p className="text-lg text-muted-foreground leading-relaxed">
               To be the most trusted and reliable advisory partner for businesses operating in India and globally. We
@@ -74,7 +74,7 @@ export default function About() {
               that drive sustainable growth and create lasting value.
             </p>
           </div>
-          <div className="p-8 bg-gradient-to-br from-accent/5 to-primary/5 border border-accent/10 rounded-xl">
+          <div className="p-8 bg-gradient-to-br from-accent/5 to-primary/5 border border-accent/10 rounded-2xl">
             <h3 className="text-3xl font-bold text-foreground mb-4">Our Motto</h3>
             <p className="text-2xl font-bold text-primary mb-4">"Trust. Expertise. Growth."</p>
             <p className="text-lg text-muted-foreground leading-relaxed">
@@ -84,7 +84,7 @@ export default function About() {
           </div>
         </div>
 
-        {/* Leadership Team */}
+        {/* Leadership Team - Rounded-2xl */}
         <div>
           <div className="mb-8">
             <p className="text-primary text-sm font-semibold uppercase tracking-wide mb-2">Leadership</p>
@@ -94,7 +94,7 @@ export default function About() {
             {team.map((member, index) => (
               <div
                 key={index}
-                className="group bg-card border border-border rounded-xl overflow-hidden hover:border-primary/30 hover:shadow-lg transition-all duration-300"
+                className="group bg-card border border-border rounded-2xl overflow-hidden hover:border-primary/30 hover:shadow-lg transition-all duration-300"
               >
                 <div className="h-64 bg-muted overflow-hidden">
                   <img

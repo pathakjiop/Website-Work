@@ -12,15 +12,17 @@ function ContactItem({
   children: React.ReactNode
 }) {
   return (
-    <div className="flex items-start gap-4 p-6 bg-card border border-border rounded-xl hover:shadow-md transition-shadow">
-      <div className="w-12 h-12 flex items-center justify-center rounded-lg bg-primary/10 text-primary">
+    /* Card - Corners updated to rounded-2xl */
+    <div className="flex items-start gap-4 p-6 bg-card border border-border rounded-2xl hover:shadow-lg transition-all duration-300">
+      {/* Icon Box - Corners updated to rounded-xl */}
+      <div className="w-12 h-12 flex-shrink-0 flex items-center justify-center rounded-xl bg-primary/10 text-primary">
         {icon}
       </div>
       <div>
         <h3 className="font-semibold text-foreground mb-1">{title}</h3>
-        <p className="text-sm text-muted-foreground leading-relaxed">
+        <div className="text-sm text-muted-foreground leading-relaxed">
           {children}
-        </p>
+        </div>
       </div>
     </div>
   )
@@ -78,14 +80,13 @@ export default function Contact() {
           >
             <a
               href="mailto:info@eagleswift.com"
-              className="hover:text-primary transition-colors"
+              className="hover:text-primary transition-colors block"
             >
               info@eagleswift.com
             </a>
-            <br />
             <a
               href="mailto:support@eagleswift.com"
-              className="hover:text-primary transition-colors"
+              className="hover:text-primary transition-colors block"
             >
               support@eagleswift.com
             </a>

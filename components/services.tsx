@@ -52,15 +52,18 @@ export default function Services() {
             return (
               <div
                 key={index}
-                className="group p-8 bg-card border border-border rounded-xl hover:border-primary/30 hover:shadow-lg transition-all duration-300"
+                className="group p-8 bg-card border border-border rounded-2xl hover:border-primary/30 hover:shadow-lg transition-all duration-300"
               >
                 <div className="flex items-start gap-4 mb-6">
-                  <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center group-hover:bg-primary/20 transition-colors">
+                  {/* Icon Box - Soft Rounded */}
+                  <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center group-hover:bg-primary/20 transition-colors">
                     <Icon className="w-6 h-6 text-primary" />
                   </div>
                   <h3 className="text-2xl font-bold text-foreground">{service.title}</h3>
                 </div>
                 <p className="text-muted-foreground leading-relaxed mb-6">{service.description}</p>
+                
+                {/* Features Tags - Rounded Full */}
                 <div className="flex flex-wrap gap-2">
                   {service.features.map((feature, idx) => (
                     <span key={idx} className="px-3 py-1 text-xs font-medium bg-primary/5 text-primary rounded-full">
