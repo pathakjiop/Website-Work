@@ -1,6 +1,18 @@
+"use client";
+
 import Link from "next/link"
 
 export default function Hero() {
+  const openCalendly = () => {
+    if (window.Calendly) {
+      window.Calendly.initPopupWidget({
+        url: 'https://calendly.com/shravanideshmukh-pureframe/30min'
+      });
+    } else {
+      window.open('https://calendly.com/shravanideshmukh-pureframe/30min', '_blank');
+    }
+  };
+
   return (
     <section className="relative bg-gradient-to-br from-primary via-primary/95 to-accent text-primary-foreground py-24 md:py-32 lg:py-40 overflow-hidden">
       <div className="absolute top-0 right-0 w-96 h-96 bg-secondary/10 rounded-full -mr-48 -mt-48 blur-3xl"></div>
@@ -22,16 +34,20 @@ export default function Hero() {
             strategic advisory services. Serving Indian and offshore clients with expertise and integrity across
             borders.
           </p>
+          
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              href="/consultation"
-              className="px-8 py-3 bg-primary-foreground text-primary rounded-lg font-semibold hover:shadow-lg transition-shadow"
+            {/* Schedule Consultation Button - Rounded-2xl */}
+            <button
+              onClick={openCalendly}
+              className="px-8 py-3 bg-primary-foreground text-primary rounded-2xl font-semibold hover:shadow-lg transition-shadow"
             >
               Schedule Consultation
-            </Link>
+            </button>
+            
+            {/* Learn More Button - Rounded-2xl */}
             <Link
               href="#services"
-              className="px-8 py-3 border-2 border-primary-foreground text-primary-foreground rounded-lg font-semibold hover:bg-primary-foreground/10 transition-all"
+              className="px-8 py-3 border-2 border-primary-foreground text-primary-foreground rounded-2xl font-semibold hover:bg-primary-foreground/10 transition-all text-center"
             >
               Learn More
             </Link>
