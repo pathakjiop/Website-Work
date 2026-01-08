@@ -44,12 +44,12 @@ export default function Header() {
             <Link href="/terms" className="text-sm font-medium text-foreground hover:text-primary transition-colors">Terms</Link>
           </nav>
 
-          <button
+            <button
             onClick={openCalendly}
-            className="hidden md:block px-6 py-2 bg-primary text-primary-foreground rounded-lg text-sm font-semibold hover:opacity-90 transition-opacity shadow-md hover:shadow-lg"
-          >
+            className="hidden md:block px-6 py-2 bg-primary text-primary-foreground rounded-full text-sm font-semibold hover:opacity-90 transition-opacity shadow-md hover:shadow-lg"
+            >
             Schedule Meeting
-          </button>
+            </button>
 
           <button className="md:hidden" onClick={() => setIsOpen(!isOpen)}>
             <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
